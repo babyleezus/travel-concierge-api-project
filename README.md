@@ -1,5 +1,10 @@
 # travel-concierge-api-project
 
+
+
+Project Name - TravelAid
+User story - As a user I want to search for all in one travel app that includes nearest available healthcare provider, local amenities/entertainment and is available in different languages.
+
 travel concierge?  - 
   food - https://rapidapi.com/category/Food
   healthcare - in target language, healthcare apis catered towards english speakers - pharmacies, doctors, hospitals
