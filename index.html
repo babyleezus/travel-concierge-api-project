@@ -8,6 +8,12 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -19,7 +25,11 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <!--Google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&family=Noto+Serif+Display:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./Assets/css/style.css" />
 
     <title>Sojourn</title>
   </head>
@@ -55,17 +65,7 @@
             <a class="nav-link" href="#">Other services</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
+        <div id="google_translate_element"></div>
       </div>
     </nav>
 
@@ -73,18 +73,14 @@
 
     <!-- Jumbotron -->
 
-    <!-- Background image -->
+    
     <div
-      id="intro-example"
       class="p-5 text-center bg-image"
-      style="
-        background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
-      "
-    >
-      <div class="mask" style="background-color: rgba(0, 0, 0, 0.7)">
-        <div class="d-flex justify-content-center align-items-center h-100">
-          <div class="text-white">
-            <h1 class="mb-3">Sojourn</h1>
+      style=" background-image: url('./Assets/img/hero-banner.jpg'); width: 100%; height: 90vh; background-size: cover;" >
+      <div class="mask" >
+        <div class="d-flex align-items-center justify-content-center min-vh-100" >
+          <div class="text-white text-center" >
+            <h1 class="mb-3 hero-text" >Sojourn</h1>
             <h5 class="mb-4">STAY A LITTLE LONGER</h5>
             <a
               class="btn btn-outline-light btn-lg m-2"
@@ -115,13 +111,16 @@
         </div>
       </div>
     </div>
+  
     <!-- Background image -->
     <!-- Jumbotron -->
 
     <!--Add Cards-->
 
-    <div class="container">
-      <h1 class="display-2 text-center">Destinations</h1>
+
+
+    <div class="container mb-5">
+      <h1 class="display-2 text-center">Treding destinations</h1>
 
       <div class="row mt-lg-4 justify-content-center">
         <div class="card p-2 mr-3" style="width: 18rem">
@@ -193,7 +192,135 @@
       </div>
     </div>
 
-    <h1></h1>
+    <div id="mapid"></div>
+
+    <input type="text" id="citySearch" placeholder="Zoom in">
+    <button id="searchBtn">Search </button>
+
+    <!-- footer-->
+
+
+<footer class="text-center text-white mt-5" style="background-color: #caced1;">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Images -->
+    <section class="">
+      <div class="row">
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
+              class="w-100"
+            />
+            <a href="#!">
+              <div
+                class="mask"
+                style="background-color: rgba(251, 251, 251, 0.2);"
+              ></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section: Images -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -208,6 +335,8 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="./Assets/js/script.js"></script>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
