@@ -1,3 +1,13 @@
 body {
     color: aquamarine;
 }
+
+.p-5-text-center-bg-image {
+    width: 100%;
+    height: 580px;
+
+}
+
+.mask {
+    background-color: transparent;
+}
