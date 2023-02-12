@@ -8,36 +8,59 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-    crossorigin=""></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
     <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
       crossorigin="anonymous"
     />
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&family=Noto+Serif+Display:wght@300;400;600&display=swap"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <!--bootstrap icon-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
     <!--Google fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&family=Noto+Serif+Display:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./Assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&family=Noto+Serif+Display:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
 
     <title>Sojourn</title>
   </head>
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="#">
+        <img
+          src="Assets/img/logo-globe-dark.PNG"
+          class="rounded"
+          style="max-width: 8%"
+          alt="logo-globe"
+      /></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -67,137 +90,179 @@
             <a class="nav-link" href="#">Other services</a>
           </li>
         </ul>
-        <div class="sign-btn">
-        <button id="signup-button">Sign Up</button>
-        <button id="signin-button">Sign In</button>
-        </div>
-        <div id="google_translate_element"></div>
       </div>
+      <div>
+        <div class="sign-btn">
+          <button class="new-btn" id="signup-button">Sign Up</button>
+          <button class="new-btn" id="signin-button">Sign In</button>
+        </div>
+      </div>
+      <div id="google_translate_element"></div>
     </nav>
 
     <!--Sign Modals-->
 
-    <div id="signup-modal" style="display: none;">
+    <div id="signup-modal" style="display: none">
       <div class="modal-content">
         <span class="close">&times;</span>
         <form id="signup-form">
-          <input type="text" placeholder="Username" id="username">
-          <input type="email" placeholder="Email" id="email">
-          <input type="password" placeholder="Password" id="password">
-          <button type="submit">Submit</button>
+          <input type="text" placeholder="Username" id="username" />
+          <input type="email" placeholder="Email" id="email" />
+          <input type="password" placeholder="Password" id="password" />
+          <button class="new-btn" type="submit">Submit</button>
         </form>
       </div>
     </div>
-    
-    <div id="signin-modal" style="display: none;">
+
+    <div id="signin-modal" style="display: none">
       <div class="modal-content">
         <span class="close">&times;</span>
         <form id="signin-form">
-          <input type="text" placeholder="Username" id="signin-username">
-          <input type="password" placeholder="Password" id="signin-password">
-          <button type="submit">Submit</button>
+          <input type="text" placeholder="Username" id="signin-username" />
+          <input type="password" placeholder="Password" id="signin-password" />
+          <button class="new-btn" type="submit">Submit</button>
         </form>
       </div>
     </div>
 
-
-
     <!-- Add Hero Section -->
 
-    <!-- Jumbotron -->
-
-    
     <div
-      class="p-5 text-center bg-image"
-      style=" background-image: url('./Assets/img/hero-banner.jpg'); width: 100%; height: 90vh; background-size: cover;" >
-      <div class="mask" >
-        <div class="d-flex align-items-center justify-content-center min-vh-100" >
-          <div class="text-white text-center" >
-            <h1 class="mb-3 hero-text" >Sojourn</h1>
+      class="container-fluid p-5 text-center bg-image"
+      style="
+        background-image: url('./Assets/img/hero-castle.png');
+        width: 100%;
+        height: 90vh;
+        background-size: cover;
+      "
+    >
+      <div class="mask">
+        <div
+          class="d-flex align-items-center justify-content-center min-vh-100"
+        >
+          <div class="text-white text-center">
+            <img
+              src="./Assets/img/logo-globe-white.PNG"
+              class="rounded"
+              style="max-width: 50%"
+              alt="globe"
+            />
+            <h1 class="mb-3 hero-text" style="font: 10em sans-serif">
+              Sojourn
+            </h1>
             <h5 class="mb-4">STAY A LITTLE LONGER</h5>
-            
+
             <!-- Search form -->
             <div class="container">
-            <form class="form-inline search-btn">
-              <input
-                class="form-control form-control-sm ml-5 w-95"
-                type="text"
-                placeholder="Search"
-                aria-label="Search"
-                
-              />
-              <i class="bi bi-search"></i>
-              
-              
-            </form>
-            <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="https://mdbootstrap.com/docs/standard/"
-              target="_blank"
-              role="button"
-              >Button</a
-            >#
-            <a
-              class="btn btn-outline-light btn-lg m-2"
-              href="https://www.youtube.com/watch?v=c9B4TPnak1A"
-              role="button"
-              rel="nofollow"
-              target="_blank"
-              >Button</a
-            >
+              <div class="row">
+                <div class="col-md-12">
+                  <!--To use the full functionality visit https://www.algolia.com-->
+                  <h6 class="text-center">
+                    Type your location(New york, London, Delhi, Tokyo)
+                  </h6>
+
+                  <input
+                    type="search"
+                    id="address"
+                    class="form-control"
+                    placeholder="Where are we going?"
+                  />
+                </div>
+              </div>
+              <a
+                class="btn btn-outline-light btn-lg m-2"
+                href="https://mdbootstrap.com/docs/standard/"
+                target="_blank"
+                role="button"
+                >Button</a
+              >
+              <a
+                class="btn btn-outline-light btn-lg m-2"
+                href="https://www.youtube.com/watch?v=c9B4TPnak1A"
+                role="button"
+                rel="nofollow"
+                target="_blank"
+                >Button</a
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
-  
+
     <!-- Background image -->
     <!-- Jumbotron -->
 
-
     <!--unsplash api-->
-
-      <div class="form-group">
-      <input type="text" id="search-input" class="form-control" placeholder="Search for photos">
-      <button id="search-button" class="btn btn-primary">Search</button>
-    </div>
-    <div id="images-container" class="d-flex justify-content-between">
-      <!-- Image cards go here -->
+    <div class="container">
+      <div class="form-group text-center justify-content-center">
+        <input
+          type="text"
+          id="search-input"
+          class="form-control"
+          placeholder="Search for photos"
+        />
+        <button id="search-button" class="btn btn-primary new-btn">
+          Search
+        </button>
+      </div>
+      <div id="images-container" class="d-flex justify-content-between">
+        <!-- Image cards go here -->
+      </div>
     </div>
     <!--Add Cards-->
-
-
 
     <div class="container mb-5">
       <h1 class="display-2 text-center">Destinations</h1>
 
       <div class="row mt-lg-4 justify-content-center">
         <div class="card p-2 mr-3" style="width: 18rem">
-          <img class="card-img-top" src="./Assets/img/London.jpg" alt="Card image cap" />
+          <img
+            class="card-img-top"
+            src="./Assets/img/London.jpg"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <h5 class="card-title">London</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos necessitatibus distinctio ducimus ipsa repellat esse reiciendis, neque illo perferendis minus, quia quae quod obcaecati deserunt veniam hic modi iste. Doloribus?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos necessitatibus distinctio ducimus ipsa repellat esse
+              reiciendis, neque illo perferendis minus, quia quae quod obcaecati
+              deserunt veniam hic modi iste. Doloribus?
             </p>
             <a href="#" class="btn btn-primary">See more</a>
           </div>
         </div>
         <div class="card p-2 mr-3" style="width: 18rem">
-          <img class="card-img-top" src="./Assets/img/Paris.jpg" alt="Card image cap" />
+          <img
+            class="card-img-top"
+            src="./Assets/img/Paris.jpg"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <h5 class="card-title">Paris</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptatem dolore culpa itaque, ea corrupti earum omnis amet tempore? Fugiat eligendi, tenetur maxime deserunt aut quibusdam. Sequi odit voluptas modi!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              voluptatem dolore culpa itaque, ea corrupti earum omnis amet
+              tempore? Fugiat eligendi, tenetur maxime deserunt aut quibusdam.
+              Sequi odit voluptas modi!
             </p>
             <a href="#" class="btn btn-primary">See more</a>
           </div>
         </div>
         <div class="card p-2 mr-3" style="width: 18rem">
-          <img class="card-img-top" src="./Assets/img/Rome.jpg" alt="Card image cap" />
+          <img
+            class="card-img-top"
+            src="./Assets/img/Rome.jpg"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <h5 class="card-title">Rome</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, voluptates aliquam qui fugiat officiis veniam molestiae dolore facilis voluptas earum odio architecto. Iure illum aliquid dolor debitis asperiores ipsum neque.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
+              voluptates aliquam qui fugiat officiis veniam molestiae dolore
+              facilis voluptas earum odio architecto. Iure illum aliquid dolor
+              debitis asperiores ipsum neque.
             </p>
             <a href="#" class="btn btn-primary">See more</a>
           </div>
@@ -209,31 +274,52 @@
 
       <div class="row mt-lg-4 justify-content-center">
         <div class="card p-2 mr-3" style="width: 18rem">
-          <img class="card-img-top" src="Assets/img/Local Entertainment.jpg" alt="Card image cap" />
+          <img
+            class="card-img-top"
+            src="Assets/img/Local Entertainment.jpg"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <h5 class="card-title">Local Entertainment</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos necessitatibus distinctio ducimus ipsa repellat esse reiciendis, neque illo perferendis minus, quia quae quod obcaecati deserunt veniam hic modi iste. Doloribus?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Dignissimos necessitatibus distinctio ducimus ipsa repellat esse
+              reiciendis, neque illo perferendis minus, quia quae quod obcaecati
+              deserunt veniam hic modi iste. Doloribus?
             </p>
             <a href="#" class="btn btn-primary">See more</a>
           </div>
         </div>
         <div class="card p-2 mr-3" style="width: 18rem">
-          <img class="card-img-top" src="Assets/img/activities.jpg" alt="Card image cap" />
+          <img
+            class="card-img-top"
+            src="Assets/img/activities.jpg"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <h5 class="card-title">Excursions</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptatem dolore culpa itaque, ea corrupti earum omnis amet tempore? Fugiat eligendi, tenetur maxime deserunt aut quibusdam. Sequi odit voluptas modi!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+              voluptatem dolore culpa itaque, ea corrupti earum omnis amet
+              tempore? Fugiat eligendi, tenetur maxime deserunt aut quibusdam.
+              Sequi odit voluptas modi!
             </p>
             <a href="#" class="btn btn-primary">See more</a>
           </div>
         </div>
         <div class="card p-2 mr-3" style="width: 18rem">
-          <img class="card-img-top" src="Assets/img/museum.jpg" alt="Card image cap" />
+          <img
+            class="card-img-top"
+            src="Assets/img/museum.jpg"
+            alt="Card image cap"
+          />
           <div class="card-body">
             <h5 class="card-title">Museums</h5>
             <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit, voluptates aliquam qui fugiat officiis veniam molestiae dolore facilis voluptas earum odio architecto. Iure illum aliquid dolor debitis asperiores ipsum neque.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
+              voluptates aliquam qui fugiat officiis veniam molestiae dolore
+              facilis voluptas earum odio architecto. Iure illum aliquid dolor
+              debitis asperiores ipsum neque.
             </p>
             <a href="#" class="btn btn-primary">See more</a>
           </div>
@@ -243,133 +329,137 @@
 
     <div id="mapid"></div>
 
-    <input type="text" id="citySearch" placeholder="Zoom in">
-    <button id="searchBtn">Search </button>
+    <input type="text" id="citySearch" placeholder="Zoom in" />
+    <button class="new-btn" id="searchBtn">Search</button>
 
     <!-- footer-->
 
-
-<footer class="text-center text-white mt-5" style="background-color: #caced1;">
-  <!-- Grid container -->
-  <div class="container p-4">
-    <!-- Section: Images -->
-    <section class="">
-      <div class="row">
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
-              class="w-100"
-            />
-            <a href="#!">
+    <footer
+      class="text-center text-white mt-5"
+      style="background-color: #caced1"
+    >
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Images -->
+        <section class="">
+          <div class="row">
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
               <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
-              class="w-100"
-            />
-            <a href="#!">
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+                  class="w-100"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
               <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
-              class="w-100"
-            />
-            <a href="#!">
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+                  class="w-100"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
               <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
-              class="w-100"
-            />
-            <a href="#!">
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+                  class="w-100"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
               <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
-              class="w-100"
-            />
-            <a href="#!">
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+                  class="w-100"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
               <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
-          <div
-            class="bg-image hover-overlay ripple shadow-1-strong rounded"
-            data-ripple-color="light"
-          >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
-              class="w-100"
-            />
-            <a href="#!">
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+                  class="w-100"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
               <div
-                class="mask"
-                style="background-color: rgba(251, 251, 251, 0.2);"
-              ></div>
-            </a>
+                class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                data-ripple-color="light"
+              >
+                <img
+                  src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
+                  class="w-100"
+                />
+                <a href="#!">
+                  <div
+                    class="mask"
+                    style="background-color: rgba(251, 251, 251, 0.2)"
+                  ></div>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+        <!-- Section: Images -->
       </div>
-    </section>
-    <!-- Section: Images -->
-  </div>
-  <!-- Grid container -->
+      <!-- Grid container -->
 
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2023 Copyright:
-    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-</footer>
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+          >MDBootstrap.com</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -384,8 +474,11 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.16.4"></script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="./Assets/js/script.js"></script>
+    <script src="./Assets/js/search-btn.js"></script>
 
     <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -395,10 +488,9 @@
   </body>
   <footer>
     <h3>Get in touch!</h3>
-      <p><a href="https://www.instagram.com/"></a>Instagram</p>
-      <p><a href="https://www.tiktok.com/"></a>TikTok</p>
-      <p><a href="https://www.facebook.com/"></a>Facebook</p>
-      <p><a href="https://www.twitter.com/"></a>Twitter</p>
-    
+    <p><a href="https://www.instagram.com/"></a>Instagram</p>
+    <p><a href="https://www.tiktok.com/"></a>TikTok</p>
+    <p><a href="https://www.facebook.com/"></a>Facebook</p>
+    <p><a href="https://www.twitter.com/"></a>Twitter</p>
   </footer>
 </html>
