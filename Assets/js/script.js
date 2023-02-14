@@ -97,6 +97,8 @@ searchMap.addEventListener("click", () => {
     });
 });
 
+// google translation
+
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     { pageLanguage: "en" },
