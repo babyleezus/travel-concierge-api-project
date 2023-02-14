@@ -65,6 +65,9 @@ a {
   background-color: #ffffff;
 }
 
+.container-mt-5 {
+  height: 700px;
+}
 /* footer section */
 
 footer {
@@ -88,6 +91,10 @@ footer .list-inline li {
 }
 
 footer .list-inline li a {
+  color: #fff;
+}
+
+footer .bi-bi-facebook {
   color: #fff;
 }
 
