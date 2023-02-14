@@ -129,6 +129,9 @@ a {
   background-color: #2196F3;
 }
 
+.col-md-4 {
+  border: none;
+}
 /* footer section */
 
 footer {
@@ -152,6 +155,10 @@ footer .list-inline li {
 }
 
 footer .list-inline li a {
+  color: #fff;
+}
+
+footer .bi-bi-facebook {
   color: #fff;
 }
 
