@@ -39,7 +39,7 @@ searchBtn.addEventListener("click", () => {
 
 // openweather api
 
-const apiKey = "bf448c820b7abc0e9f0744329593ee18";
+const apiKey = "9b0a103316d21cb27769a0ef1db4a9e7";
 const forecastContainer = document.getElementById("forecast-container");
 const searchButton = document.getElementById("searchButton");
 
