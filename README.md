@@ -18,7 +18,7 @@ Future development:
 - connect users calendar for activites  
   
 Contributers: 
-Axel Jamal - github.com/axeljamal
-Renee Buchanan - github.com/reneedanielleb
-Lentio Sechou - github.com/lentiodev
-Aleeza Malik - github.com/babyleezus
+- Axel Jamal - github.com/axeljamal
+- Renee Buchanan - github.com/reneedanielleb
+- Lentio Sechou - github.com/lentiodev
+- Aleeza Malik - github.com/babyleezus
