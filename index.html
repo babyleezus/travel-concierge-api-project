@@ -211,23 +211,23 @@
         <p>Check out these two amazing cities:</p>
       
         <div class="d-flex justify-content-between">
-          <a href="london.html">
+          <a class="activity-link" onclick="showLondon()">
             <i class="fas fa-map-marked-alt fa-2x mr-3"></i>
             London
           </a>
-          <a href="#">
+          <a class="activity-link" onclick="showAmsterdam()">
             <i class="fas fa-map-marked-alt fa-2x mr-3"></i>
             Amsterdam
           </a>
-          <a href="#">
+          <a class="activity-link" onclick="showParis()">
             <i class="fas fa-map-marked-alt fa-2x mr-3"></i>
             Paris
           </a>
-          <a href="#">
+          <a class="activity-link" onclick="showRome()">
             <i class="fas fa-map-marked-alt fa-2x mr-3"></i>
             Rome
           </a>
-          <a href="#">
+          <a class="activity-link" onclick="showBarcelona()">
             <i class="fas fa-map-marked-alt fa-2x mr-3"></i>
             Barcelona
           </a>
@@ -235,112 +235,8 @@
       </div>
       
           <!--europian city's activities-->
-      
-          <div class="container mt-5">
-            <h1 class="text-center mb-5">Where would you like to go?</h1>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card"><a href="#">
-                  <img
-                    src="./assets/img/London.jpg"
-                    class="card-img-top"
-                    alt="London"
-                  /></a>
-                  <div class="card-body">
-                    <h5 class="card-title">London</h5>
-                    <p class="card-text">
-                      The capital city of the U.K. is home to the Royal family, Big Ben and the London Eye. A city steeped in history whilst being a cosmopolitan cultural hub. 
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card"><a href="#">
-                  <img
-                    src="./assets/img/amsterdam.jpg"
-                    class="card-img-top"
-                    alt="Amsterdam"
-                  /></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Amsterdam</h5>
-                    <p class="card-text">
-                      Amsterdam is famous for its canals, museums and
-                      vibrant nightlife. 
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card"><a href="#">
-                  <img
-                    src="./assets/img/paris.jpg"
-                    class="card-img-top"
-                    alt="Paris"
-                  /></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Paris</h5>
-                    <p class="card-text">
-                      Paris is known as the city of love and is famous for its
-                      iconic landmarks such as the Eiffel Tower and Notre Dame.
-                      
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container mt-5 mb-5">
-            <h1 class="text-center mb-5">What's on?</h1>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card">
-                  <a href="#">
-                  <img
-                    src="./assets/img/Local Entertainment.jpg"
-                    class="card-img-top"
-                    alt="Local Entertainment"
-                  /></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Local Entertainment</h5>
-                    <p class="card-text">
-                      Fancy seeing a show in London's West End? A night at Amsterdam's biggest EDM festival with world class DJs? Or a night at the Parisian Ballet? We've hand picked some of the best cultural events for you to fully immerse yourself in the local culture.
-                    </p>
-                  
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card">
-                  <a href="#">
-                  <img
-                    src="./assets/img/activities.jpg"
-                    class="card-img-top"
-                    alt="Activities"
-                  /></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Activities</h5>
-                    <p class="card-text">
-                      Climb the O2 arena to enjoy 360 views over London. Learn how to make pizza likea true Italian in Rome. We have a whole host of activities away from the crowds.  
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card"><a href="#">
-                  <img
-                    src="./assets/img/museum.jpg"
-                    class="card-img-top"
-                    alt="Museums"
-                  /></a>
-                  <div class="card-body">
-                    <h5 class="card-title">Museums</h5>
-                    <p class="card-text">
-                      See some of the world's most famous artworks at the Louvre. Experience the world's first immersive art exhibit at Moco in Amsterdam or enjoy the ancient ruins of Rome. 
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+          <div id="card-container" class="card-deck" style="display: none;"></div>
       
           <!--footer section-->
       
