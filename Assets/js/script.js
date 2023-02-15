@@ -17,11 +17,11 @@ const fetchPhotos = (searchTerm) => {
       // Loop through the photos and add them to the HTML
       data.results.forEach((photo) => {
         const div = document.createElement("div");
-        div.classList.add("card", "m-2");
+        div.classList.add("cards", "m-2");
         div.style.width = "18rem";
         const img = document.createElement("img");
         img.src = photo.urls.regular;
-        img.classList.add("card-img-top");
+        img.classList.add("cards-img-contain");
         div.appendChild(img);
         imagesContainer.appendChild(div);
       });
@@ -56,13 +56,13 @@ searchButton.addEventListener("click", () => {
         const iconCode = data.list[i].weather[0].icon;
         const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
         forecastContainer.innerHTML += `
-                <div>
+                <div">
                   <h3>${new Date(
                     data.list[i].dt * 1000
                   ).toLocaleDateString()}</h3>
                   <p>Temperature: ${temperature.toFixed(2)}°C</p>
                   <img src="${iconUrl}" alt="Weather Icon">
-                  <p>Description: ${data.list[i].weather[0].description}</p>
+                  <p>${data.list[i].weather[0].description}</p>
                 </div>
               `;
       }
