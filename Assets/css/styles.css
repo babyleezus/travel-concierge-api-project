@@ -113,7 +113,18 @@ footer .bi-bi-facebook {
   width: 100%;
 }
 
-@media only screen and (max-width: 460px) {
+@media screen and (max-device-width: 984px) {
+  .overlay {
+    position: absolute;
+    background-color: #000d21;
+    opacity: calc(90%);
+    top: 90%;
+    left: 10%;
+    right: 10%;
+    border-radius: 20px;
+  }
+}
+@media only screen and (max-width: 700px) {
   #images-container {
     display: flex;
     flex-wrap: wrap;
