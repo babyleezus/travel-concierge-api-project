@@ -105,3 +105,269 @@ function googleTranslateElementInit() {
     "google_translate_element"
   );
 }
+
+
+// london activities
+
+function showLondon() {
+  const cardContainer = document.getElementById('card-container');
+  cardContainer.style.display = 'flex';
+  
+  const cards = [
+    {
+      title: 'Visiting the British Museum',
+      text: 'The British Museum is one of the world most famous museums, housing over 8 million artifacts from all over the world.',
+      image: 'https://images.unsplash.com/photo-1577729507926-78897cc4de05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
+    },
+    {
+      title: 'Riding the London Eye',
+      text: 'The London Eye is a giant ferris wheel located on the South Bank of the River Thames.',
+      image: 'https://images.unsplash.com/photo-1611078214787-8095d414314e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=940&q=80'
+    },
+    {
+      title: 'Watching a play at Shakespeare Globe',
+      text: 'The Globe Theatre is a replica of the original theatre where Shakespeare plays were first performed.',
+      image: 'https://images.unsplash.com/photo-1628630470691-4a53e09fceec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80'
+    },
+    {
+      title: 'Taking a tour of Buckingham Palace',
+      text: 'Buckingham Palace is the official residence of the British monarch and is open to visitors during the summer months.',
+      image: 'https://images.unsplash.com/photo-1582581388879-65cdb825ec67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+    }
+  ];
+  
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const cardElement = document.createElement('div');
+    cardElement.className = 'card';
+    const cardImageElement = document.createElement('img');
+    cardImageElement.className = 'card-img-top';
+    cardImageElement.src = card.image;
+    cardImageElement.alt = `Image for ${card.title}`;
+    const cardBodyElement = document.createElement('div');
+    cardBodyElement.className = 'card-body';
+    const cardTitleElement = document.createElement('h5');
+    cardTitleElement.className = 'card-title';
+    cardTitleElement.textContent = card.title;
+    const cardTextElement = document.createElement('p');
+    cardTextElement.className = 'card-text';
+    cardTextElement.textContent = card.text;
+    cardBodyElement.appendChild(cardTitleElement);
+    cardBodyElement.appendChild(cardTextElement);
+    cardElement.appendChild(cardImageElement);
+    cardElement.appendChild(cardBodyElement);
+    cardContainer.appendChild(cardElement);
+  }
+}
+
+// Amsterdam activities
+
+function showAmsterdam() {
+  const cardContainer = document.getElementById('card-container');
+  cardContainer.style.display = 'flex';
+  
+  const cards = [
+    {
+      title: 'Visiting the British Museum',
+      text: 'The British Museum is one of the world most famous museums, housing over 8 million artifacts from all over the world.',
+      image: 'https://images.unsplash.com/photo-1577729507926-78897cc4de05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
+    },
+    {
+      title: 'Riding the London Eye',
+      text: 'The London Eye is a giant ferris wheel located on the South Bank of the River Thames.',
+      image: 'https://images.unsplash.com/photo-1611078214787-8095d414314e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=940&q=80'
+    },
+    {
+      title: 'Watching a play at Shakespeare Globe',
+      text: 'The Globe Theatre is a replica of the original theatre where Shakespeare plays were first performed.',
+      image: 'https://images.unsplash.com/photo-1628630470691-4a53e09fceec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80'
+    },
+    {
+      title: 'Taking a tour of Buckingham Palace',
+      text: 'Buckingham Palace is the official residence of the British monarch and is open to visitors during the summer months.',
+      image: 'https://images.unsplash.com/photo-1582581388879-65cdb825ec67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+    }
+  ];
+  
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const cardElement = document.createElement('div');
+    cardElement.className = 'card';
+    const cardImageElement = document.createElement('img');
+    cardImageElement.className = 'card-img-top';
+    cardImageElement.src = card.image;
+    cardImageElement.alt = `Image for ${card.title}`;
+    const cardBodyElement = document.createElement('div');
+    cardBodyElement.className = 'card-body';
+    const cardTitleElement = document.createElement('h5');
+    cardTitleElement.className = 'card-title';
+    cardTitleElement.textContent = card.title;
+    const cardTextElement = document.createElement('p');
+    cardTextElement.className = 'card-text';
+    cardTextElement.textContent = card.text;
+    cardBodyElement.appendChild(cardTitleElement);
+    cardBodyElement.appendChild(cardTextElement);
+    cardElement.appendChild(cardImageElement);
+    cardElement.appendChild(cardBodyElement);
+    cardContainer.appendChild(cardElement);
+  }
+}
+
+// Paris activities
+
+function showParis() {
+  const cardContainer = document.getElementById('card-container');
+  cardContainer.style.display = 'flex';
+  
+  const cards = [
+    {
+      title: 'Visiting the British Museum',
+      text: 'The British Museum is one of the world most famous museums, housing over 8 million artifacts from all over the world.',
+      image: 'https://images.unsplash.com/photo-1577729507926-78897cc4de05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
+    },
+    {
+      title: 'Riding the London Eye',
+      text: 'The London Eye is a giant ferris wheel located on the South Bank of the River Thames.',
+      image: 'https://images.unsplash.com/photo-1611078214787-8095d414314e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=940&q=80'
+    },
+    {
+      title: 'Watching a play at Shakespeare Globe',
+      text: 'The Globe Theatre is a replica of the original theatre where Shakespeare plays were first performed.',
+      image: 'https://images.unsplash.com/photo-1628630470691-4a53e09fceec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80'
+    },
+    {
+      title: 'Taking a tour of Buckingham Palace',
+      text: 'Buckingham Palace is the official residence of the British monarch and is open to visitors during the summer months.',
+      image: 'https://images.unsplash.com/photo-1582581388879-65cdb825ec67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+    }
+  ];
+  
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const cardElement = document.createElement('div');
+    cardElement.className = 'card';
+    const cardImageElement = document.createElement('img');
+    cardImageElement.className = 'card-img-top';
+    cardImageElement.src = card.image;
+    cardImageElement.alt = `Image for ${card.title}`;
+    const cardBodyElement = document.createElement('div');
+    cardBodyElement.className = 'card-body';
+    const cardTitleElement = document.createElement('h5');
+    cardTitleElement.className = 'card-title';
+    cardTitleElement.textContent = card.title;
+    const cardTextElement = document.createElement('p');
+    cardTextElement.className = 'card-text';
+    cardTextElement.textContent = card.text;
+    cardBodyElement.appendChild(cardTitleElement);
+    cardBodyElement.appendChild(cardTextElement);
+    cardElement.appendChild(cardImageElement);
+    cardElement.appendChild(cardBodyElement);
+    cardContainer.appendChild(cardElement);
+  }
+}
+
+// Rome activities
+
+function showRome() {
+  const cardContainer = document.getElementById('card-container');
+  cardContainer.style.display = 'flex';
+  
+  const cards = [
+    {
+      title: 'Visiting the British Museum',
+      text: 'The British Museum is one of the world most famous museums, housing over 8 million artifacts from all over the world.',
+      image: 'https://images.unsplash.com/photo-1577729507926-78897cc4de05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
+    },
+    {
+      title: 'Riding the London Eye',
+      text: 'The London Eye is a giant ferris wheel located on the South Bank of the River Thames.',
+      image: 'https://images.unsplash.com/photo-1611078214787-8095d414314e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=940&q=80'
+    },
+    {
+      title: 'Watching a play at Shakespeare Globe',
+      text: 'The Globe Theatre is a replica of the original theatre where Shakespeare plays were first performed.',
+      image: 'https://images.unsplash.com/photo-1628630470691-4a53e09fceec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80'
+    },
+    {
+      title: 'Taking a tour of Buckingham Palace',
+      text: 'Buckingham Palace is the official residence of the British monarch and is open to visitors during the summer months.',
+      image: 'https://images.unsplash.com/photo-1582581388879-65cdb825ec67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+    }
+  ];
+  
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const cardElement = document.createElement('div');
+    cardElement.className = 'card';
+    const cardImageElement = document.createElement('img');
+    cardImageElement.className = 'card-img-top';
+    cardImageElement.src = card.image;
+    cardImageElement.alt = `Image for ${card.title}`;
+    const cardBodyElement = document.createElement('div');
+    cardBodyElement.className = 'card-body';
+    const cardTitleElement = document.createElement('h5');
+    cardTitleElement.className = 'card-title';
+    cardTitleElement.textContent = card.title;
+    const cardTextElement = document.createElement('p');
+    cardTextElement.className = 'card-text';
+    cardTextElement.textContent = card.text;
+    cardBodyElement.appendChild(cardTitleElement);
+    cardBodyElement.appendChild(cardTextElement);
+    cardElement.appendChild(cardImageElement);
+    cardElement.appendChild(cardBodyElement);
+    cardContainer.appendChild(cardElement);
+  }
+}
+
+// Barcelona activities
+
+function showBarcelona() {
+  const cardContainer = document.getElementById('card-container');
+  cardContainer.style.display = 'flex';
+  
+  const cards = [
+    {
+      title: 'Visiting the British Museum',
+      text: 'The British Museum is one of the world most famous museums, housing over 8 million artifacts from all over the world.',
+      image: 'https://images.unsplash.com/photo-1577729507926-78897cc4de05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'
+    },
+    {
+      title: 'Riding the London Eye',
+      text: 'The London Eye is a giant ferris wheel located on the South Bank of the River Thames.',
+      image: 'https://images.unsplash.com/photo-1611078214787-8095d414314e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=940&q=80'
+    },
+    {
+      title: 'Watching a play at Shakespeare Globe',
+      text: 'The Globe Theatre is a replica of the original theatre where Shakespeare plays were first performed.',
+      image: 'https://images.unsplash.com/photo-1628630470691-4a53e09fceec?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1769&q=80'
+    },
+    {
+      title: 'Taking a tour of Buckingham Palace',
+      text: 'Buckingham Palace is the official residence of the British monarch and is open to visitors during the summer months.',
+      image: 'https://images.unsplash.com/photo-1582581388879-65cdb825ec67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+    }
+  ];
+  
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+    const cardElement = document.createElement('div');
+    cardElement.className = 'card';
+    const cardImageElement = document.createElement('img');
+    cardImageElement.className = 'card-img-top';
+    cardImageElement.src = card.image;
+    cardImageElement.alt = `Image for ${card.title}`;
+    const cardBodyElement = document.createElement('div');
+    cardBodyElement.className = 'card-body';
+    const cardTitleElement = document.createElement('h5');
+    cardTitleElement.className = 'card-title';
+    cardTitleElement.textContent = card.title;
+    const cardTextElement = document.createElement('p');
+    cardTextElement.className = 'card-text';
+    cardTextElement.textContent = card.text;
+    cardBodyElement.appendChild(cardTitleElement);
+    cardBodyElement.appendChild(cardTextElement);
+    cardElement.appendChild(cardImageElement);
+    cardElement.appendChild(cardBodyElement);
+    cardContainer.appendChild(cardElement);
+  }
+}
