@@ -21,7 +21,8 @@ User story:
 
 Deployed website:
 - https://babyleezus.github.io/travel-concierge-api-project/#
- 
+ ![sojourn-(2)_optimized](https://user-images.githubusercontent.com/119621308/219444312-5dfb85ca-a151-418f-8a89-a6947d5313f7.png)
+
 Future development:
 - adding more regions 
 - connecting users to local tour guides 
