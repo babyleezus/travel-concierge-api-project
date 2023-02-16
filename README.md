@@ -17,7 +17,10 @@ User story:
  - I also want to be able to access resources such as medical services e.g. pharmacies, doctors, OOH clinics in my chosen language. 
  - I would also like access to information on organisations like the consulate/embassy in the event of an emergency.
  - I will be able to access the weather forecast for upcoming trips and plan my activities accordingly.
- - I will be able to compile all the things I plan to do on my trip and this will be accumulated into a detailed itinerary with weather details, transport options, activities, tickets, local events, restaurant recommendations and info in case of emergencies (future development).
+ - I will be able to compile all the things I plan to do on my trip and this will be accumulated into a detailed itinerary with weather details, transport options, activities, tickets, local events, restaurant recommendations and info in case of emergencies.
+
+Deployed website:
+- https://babyleezus.github.io/travel-concierge-api-project/#
  
 Future development:
 - adding more regions 
