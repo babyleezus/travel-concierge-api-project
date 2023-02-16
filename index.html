@@ -55,11 +55,6 @@
   </button>
   <div class="collapse navbar-collapse overlay" id="navbarNav">
     <ul class="navbar-nav text-uppercase font-weight-bold mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#about"
-          >About Us <span class="sr-only">(current)</span></a
-        >
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="#destinations">Destinations</a>
       </li>
@@ -67,7 +62,7 @@
         <a class="nav-link" href="#todo">Things to do</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Other services</a>
+        <a class="nav-link" href="#connect">Connect with us</a>
       </li>
     </ul>
   <ul class="navbar-nav">
@@ -200,7 +195,7 @@
       </div>
   
       <!--map api -->
-      <h1 class="text-center mb-5 mt-5">Search Map</h1>
+      <h1 id="destinations" class="text-center mb-5 mt-5">Search Map</h1>
       <!--
       <input type="text" id="city-search" placeholder="Enter a city name">
       <button id="search-button">Search</button>
@@ -237,16 +232,16 @@
       </div>
       
           <!--europian city's activities-->
-
-          <div id="card-container" class="card-deck" style="display: none;"></div>
-      
+          <div id="todo">
+            <div id="card-container" class="card-deck" style="display: none;"></div>
+          </div>
           <!--footer section-->
       
         <footer>
-        <div class="container mt-4">
+        <div id="connect" class="container mt-4">
           <div class="row">
-            <div class="col-md-4">
-              <h3>Contact Us</h3>
+            <div class="col-md-4 mt-3">
+              <h3 class="text-center">Contact Us</h3>
               <form>
                 <div class="form-group">
                   <label for="name">Name:</label>
@@ -262,9 +257,9 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
-
             </div>
-            <div class="col-md-4">
+
+            <div class="col-md-4 mt-3 text-center">
               <h3>Follow Us</h3>
               <ul class="list-inline">
                 <li class="list-inline-item">
@@ -289,17 +284,19 @@
                 </li>
               </ul>
             </div>
-          </div>
-          
-          <div class="col-md-4">
-            <h3></h3>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Terms and Conditions</a></li>
-              <li><a href="#">Sitemap</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
+            <div class="col-md-4 mt-3 text-center">
+              <h3>About Us</h3>
+              <p>A holiday should be a relaxing break away from the hustle of your daily life. But for so many of us, the stress doesn't end when we reach our destination. Where should we go? How do we get there? What should we do?</p>
+              <p>Sojourn is here to be a one stop shop where we curate a custom itenarary for your trip so you can unplug unwind and we'll do all work!</p>
+
+            </div>
+        </div>
+        <div class="text-center mt-4 mb-5">
+            <a href="#">Terms and Conditions</a>
+            <br>
+            <a href="#">Sitemap</a>
+            <br>
+            <a href="#">Privacy Policy</a>
         </div>
       </footer>
     
