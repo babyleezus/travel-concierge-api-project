@@ -20,8 +20,11 @@ User story:
  - I will be able to compile all the things I plan to do on my trip and this will be accumulated into a detailed itinerary with weather details, transport options, activities, tickets, local events, restaurant recommendations and info in case of emergencies.
 
 Deployed website:
-- https://babyleezus.github.io/travel-concierge-api-project/#
- ![sojourn-(2)_optimized](https://user-images.githubusercontent.com/119621308/219444312-5dfb85ca-a151-418f-8a89-a6947d5313f7.png)
+- https://babyleezus.github.io/travel-concierge-api-project/
+
+![sojourn-ss_optimized](https://user-images.githubusercontent.com/119621308/219448146-9c4ff3bb-d31e-475a-9713-1c9d056ec82b.png)
+
+ 
 
 Future development:
 - adding more regions 
